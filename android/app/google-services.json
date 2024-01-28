@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "809182134007",
+    "project_id": "prarambh-edae4",
+    "storage_bucket": "prarambh-edae4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809182134007:android:6066e7b5136a846b98ddf2",
+        "android_client_info": {
+          "package_name": "com.dharmendrasapplication.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809182134007-huthggeib4k70th02rmap24i5m2s8pi7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt1-FWmgsGs70VoEKsHBvilCz8k0Fn-2Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809182134007-huthggeib4k70th02rmap24i5m2s8pi7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,9 @@
+import '../bet_seventeen_screen/widgets/column_item_widget.dart';import 'controller/bet_seventeen_controller.dart';import 'models/column_item_model.dart';import 'package:matka/core/app_export.dart';import 'package:matka/widgets/app_bar/appbar_leading_image.dart';import 'package:matka/widgets/app_bar/appbar_subtitle_one.dart';import 'package:matka/widgets/app_bar/appbar_trailing_image.dart';import 'package:matka/widgets/app_bar/custom_app_bar.dart';import 'package:flutter/material.dart';class BetSeventeenScreen extends GetWidget<BetSeventeenController> {const BetSeventeenScreen({Key? key}) : super(key: key);
+
+@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(resizeToAvoidBottomInset: false, appBar: _buildAppBar(), body: Padding(padding: EdgeInsets.only(left: 33.h, top: 54.v, right: 33.h), child: Obx(() => GridView.builder(shrinkWrap: true, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(mainAxisExtent: 61.v, crossAxisCount: 2, mainAxisSpacing: 9.h, crossAxisSpacing: 9.h), physics: NeverScrollableScrollPhysics(), itemCount: controller.betSeventeenModelObj.value.columnItemList.value.length, itemBuilder: (context, index) {ColumnItemModel model = controller.betSeventeenModelObj.value.columnItemList.value[index]; return ColumnItemWidget(model);}))))); }
+/// Section Widget
+PreferredSizeWidget _buildAppBar() { return CustomAppBar(leadingWidth: 45.h, leading: AppbarLeadingImage(imagePath: ImageConstant.imgArrowLeft, margin: EdgeInsets.only(left: 21.h, top: 15.v, bottom: 16.v), onTap: () {onTapArrowLeft();}), actions: [AppbarTrailingImage(imagePath: ImageConstant.imgWallet, margin: EdgeInsets.only(left: 32.h, top: 15.v, right: 15.h)), AppbarSubtitleOne(text: "lbl_10".tr, margin: EdgeInsets.only(left: 2.h, top: 19.v, right: 47.h))]); }
+
+/// Navigates to the previous screen.
+onTapArrowLeft() { Get.back(); }
+ }
